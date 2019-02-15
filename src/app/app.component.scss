@@ -1,0 +1,19 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+
+  .button-list {
+      list-style: none;
+      display: block;
+      padding: 0;
+      margin: 0;
+
+      li {
+          text-align: center;
+          padding: 20px 0;
+      }
+  }
+}

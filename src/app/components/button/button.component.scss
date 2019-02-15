@@ -1,0 +1,141 @@
+:host {
+  --button-font-size: 18px;
+  --button-line-height: 50px;
+  --button-min-width: 300px;
+
+  --button-border-color: transparent;
+  --button-background-color: transparent;
+  --button-arrow-color: var(--font-color-dark);
+  --button-text-color: var(--font-color-dark);
+  --button-text-transform: none;
+  --button-font-weight: 500;
+  --button-shadow: 0 3px 6px transparent;
+  --button-shadow-hover: 0 6px 12px transparent;
+  --button-focus-panel-color: transparent;
+
+  --button-focus-panel-opacity: 0.1;
+
+  all: unset;
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  line-height: 0;
+  font-size: 0;
+  vertical-align: middle;
+  background-color: var(--button-background-color);
+  border: solid 2px var(--button-border-color);
+  height: auto;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+  padding: 0 50px;
+  min-width: var(--button-min-width);
+  box-sizing: border-box;
+
+  .schemes-button-label {
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 3;
+    user-select: none;
+    font-weight: var(--button-font-weight);
+    text-transform: var(--button-text-transform);
+    height: var(--button-line-height);
+    font-size: var(--button-font-size);
+    line-height: var(--button-line-height);
+    will-change: color, -webkit-text-fill-color;
+    transition: color, -webkit-text-fill-color ease 400ms;
+    // Hack for safari (Not sure why color is not working)
+    -webkit-text-fill-color: var(--button-text-color);
+
+    color: var(--button-text-color);
+  }
+
+  .schemes-button-arrow {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: solid 2px transparent;
+    border-color: var(--button-arrow-color);
+    z-index: 3;
+    right: 20px;
+    top: 50%;
+    margin-top: -5px;
+    transform: rotate(45deg);
+    border-left: none;
+    border-bottom: none;
+    will-change: right, border-color;
+    transition: right cubic-bezier(0.19, 1, 0.22, 1) 250ms,
+      border-color cubic-bezier(0.075, 0.82, 0.165, 1) 250ms 0;
+  }
+
+  .schemes-button-overlay-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  .schemes-button-focus-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    cursor: pointer;
+    border-radius: 40px;
+    background-color: transparent;
+    opacity: var(--button-focus-panel-opacity);
+
+    &:focus {
+      background-color: var(--button-focus-panel-color);
+    }
+  }
+
+  &.button-theme-primary {
+    --button-border-color: var(--primary);
+    --button-background-color: var(--background);
+    --button-text-color: var(--primary);
+    --button-text-transform: uppercase;
+    --button-font-weight: 700;
+    --button-arrow-color: var(--primary);
+
+    --button-shadow: 0 3px 6px var(--primary-transparent);
+    --button-shadow-hover: 0 6px 12px var(--primary-transparent);
+    --button-focus-panel-color: var(--button-border-color);
+  }
+
+  &.button-theme-accent {
+    --button-border-color: var(--accent);
+    --button-background-color: var(--background);
+    --button-text-color: var(--accent);
+    --button-text-transform: uppercase;
+    --button-font-weight: 500;
+    --button-arrow-color: var(--accent);
+
+    --button-line-height: 40px;
+    --button-font-size: 16px;
+    --button-min-width: 280px;
+    --button-shadow: 0 3px 6px var(--accent-transparent);
+    --button-shadow-hover: 0 6px 12px var(--accent-transparent);
+    --button-focus-panel-color: var(--button-border-color);
+  }
+
+  &.button-raised {
+    box-shadow: var(--button-shadow);
+    will-change: box-shadow;
+    transition: box-shadow ease 200ms;
+
+    &:hover {
+      box-shadow: var(--button-shadow-hover);
+    }
+  }
+}

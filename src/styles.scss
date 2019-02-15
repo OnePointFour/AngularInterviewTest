@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --background: rgb(255, 255, 255);
+  --background-alt: rgb(224, 227, 229);
+
+  --primary: rgb(103, 58, 183);
+  --primary-tint: rgb(165, 146, 199);
+  --primary-transparent: rgba(103, 58, 183, 0.38);
+
+  --accent: rgb(96, 125, 139);
+  --accent-tint: rgb(154, 179, 192);
+  --accent-transparent: rgba(96, 125, 139, 0.38);
+
+  --font-color-background: var(--background);
+
+  --font-color-light: rgb(124, 135, 142);
+
+  --font-color-dark: rgb(60, 71, 78);
+
+  --error: rgb(156, 65, 65);
+
+  --success: rgb(25, 177, 144);
+
+  --disabled: #b3b3b3;
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
