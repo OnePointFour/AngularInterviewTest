@@ -8,10 +8,10 @@ _tip:_ This test relies on your knowledge of Angular, but there are examples wit
 
 ## Tasks
 
-- The styles on the buttons are not pulling through.
+- The styles on the buttons are not pulling through. You need to figure out why and fix it.
 - Add a new theme to the button called “alert” with a border and background colour of “rgb(208, 0, 0)”, a shadow colour of “rgba(208, 0, 0, 0.38)”, and a text and arrow colour of “rgb(255, 255, 255)”.
-- Should fire a click event when enter/space is pressed while the button is focused
-- Should add a css class of “button-is-focused” to the button when the button becomes focused (via tabbing), and should remove that class when the button is blurred (most be on the <button/> element).
-- Add disabled state to the buttons that adds a css class “button-disabled“ to the button, grays and fades it out (“#b3b3b3”, “0.5”), and makes it **unclickable** as well as **unfocusable**.
+- Add a css class of “button-is-focused” to the button when the button becomes focused (via tabbing). This should remove the class when the button is blurred (must be on the <button/> element).
+- When enter/space key is pressed while the button is focused, it should fire a native click event.
+- Add a disabled state to the buttons (css class “button-disabled“), it should turn gray (“#b3b3b3”) and change opacity (“0.5”), and makes it **unclickable** as well as **unfocusable** (via tabbing).
 
 ## All files must pass “ng lint” and the project must build using “ng build —prod”
