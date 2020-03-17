@@ -14,4 +14,8 @@ _tip:_ This test relies on your knowledge of Angular, but there are examples wit
 - When enter/space key is pressed while the button is focused, it should fire a native click event.
 - Add a disabled state to the buttons (css class “button-disabled“), it should turn gray (“#b3b3b3”) and change opacity (“0.5”), and makes it **unclickable** as well as **unfocusable** (via tabbing).
 
-## All files must pass “ng lint” and the project must build using “ng build —prod”
+---
+
+- All files must pass `ng lint` and the project must build using `ng build —prod`
+- No external libraries are to be used
+- 
