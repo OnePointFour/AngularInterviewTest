@@ -18,4 +18,4 @@ _tip:_ This test relies on your knowledge of Angular, but there are examples wit
 
 - All files must pass `ng lint` and the project must build using `ng build —prod`
 - No external libraries are to be used
-- 
+- Try to not overwrite/rewrite functionality that already exist in the project. Reuse or extend the code that has been provided (where you can)
